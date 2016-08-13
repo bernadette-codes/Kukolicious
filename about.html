@@ -11,8 +11,6 @@
 	<meta name="author" content="Bernadette Engleman">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="stylesheet.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -57,25 +55,24 @@
 	<img src="img/spa banner.jpg" alt="Nail Salon Banner" class="aboutbanner">
 </section>
 
-
 <!-- Footer -->
 <footer class="container text-center">
 	<div class="row">
 		<div class="col-xs-12">
 			<hr>
-			<p>
-				<span class="salonName">Kukolicious Nail & Spa</span><br>
-				<span class="address">45 Rockefeller Plaza, New York, NY 10111</span>
-			</p>
-			<p>Copyright © <span id="year"></span> Kukolicious Nail & Spa. All rights reserved.<br>
+			<p class="salonName">Kukolicious Nail & Spa</p>
+			<address>45 Rockefeller Plaza, New York, NY 10111</address>
+			<p><small>Copyright © <span id="year"></span> Kukolicious Nail & Spa. All rights reserved.<br>
 				<span class="small">Designed and created by:
 					<a href="http://bernadetteengleman.com/" target="_blank">B. Engleman</a>
 				</span>
-			</p>
+			</small></p>
 		</div>
 	</div>
 </footer>
 
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
 <script>
 	// Copyright Year
 	var d = new Date(), n = d.getFullYear();
