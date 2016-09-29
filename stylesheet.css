@@ -25,7 +25,6 @@ nav.menu {
 
 .brandsmall {
 	visibility: hidden;
-	width: 170px;
 	position: relative;
 	top: 10px;
 	margin-left: auto;
@@ -38,7 +37,6 @@ nav.menu {
 
 /* Brand Image */
 .brandimg {
-	width: 250px;
 	float: left;
 	margin-top: -50px;
 	padding-right: 10px;
@@ -97,7 +95,6 @@ section.about > p {
 }
 
 .servicesdivider {
-	height: 40px; 
 	display: block;
     margin-left: auto;
     margin-right: auto;
