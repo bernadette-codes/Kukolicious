@@ -160,9 +160,27 @@ section.about > p {
 }
 
 /* About Page Image */
-.aboutbanner {
-	padding: 2% 5%;
+.about .row {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.about .top {
+	padding-top: 20px;
+}
+
+.about .thumbnail {
 	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.about .thumbnail img {
+	border-radius: 3px;
+}
+
+.about p:first-of-type {
+	padding-top: 40px;
 }
 
 /* Services Page */
