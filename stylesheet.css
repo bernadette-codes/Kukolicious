@@ -161,11 +161,16 @@ section.about > p {
 
 /* About Page Image */
 .aboutbanner {
-	padding: 10px 100px 10px 100px;
+	padding: 2% 5%;
 	width: 100%;
 }
 
 /* Services Page */
+.servicesBanner {
+	padding: 2% 5%;
+	width: 100%;
+}
+
 .pricelist {
 	padding: 10px 100px 10px 100px;
 }
