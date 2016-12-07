@@ -15,7 +15,7 @@ $(document).ready(function(){
     // Front Page Carousel
     $(".carousel.slide").carousel({interval: 1500});
 
-});
+}); // end ready
 
 // Front Page Photo Show
 var thumbnailSliderOptions = {
@@ -37,7 +37,7 @@ var thumbnailSliderOptions = {
     mousewheelNav: false,
     before: null,
     license: "mylicense"
-};
+}; // end thumbnailSliderOptions
 
 var mcThumbnailSlider = new ThumbnailSlider(thumbnailSliderOptions);
 
@@ -48,56 +48,56 @@ function ThumbnailSlider(a){
         String.prototype.trim = function(){
             return this.replace(/^\s+|\s+$/g,"")
         };
-        var e = "length",
-            l = document,
-            Mb = function(c){
-                var a = c.childNodes;
-                if(a&&a[e]){
-                    var b = a[e];
-                    while(b--)a[b].nodeType != 1&&a[b][m].removeChild(a[b])
-                }
-            },
-            eb = function(a){
-                if(a&&a.stopPropagation)a.stopPropagation();
-                else if(a&&typeof a.cancelBubble != "undefined")a.cancelBubble = true
-            },
-            db = function(b){
-                var a = b||window.event;
-                if(a.preventDefault)a.preventDefault();
-                else if(a)a.returnValue = false
-            },
-            Qb = function(b){
-                if(typeof b[f].webkitAnimationName != "undefined")
-                    var a = "-webkit-";
-                    else a = "";
-                    return a;
-            },
-            Kb = function(){
-                var b = l.getElementsByTagName("head");
-                if(b[e]){
-                    var a = l.createElement("style");
-                    b[0].appendChild(a);
-                    return a.sheet?a.sheet:a.styleSheet
-                } else {
-                    return 0
-                }
-            },
-            xb = ["$1$2$3","$1$2$3","$1$24","$1$23","$1$22"],
-            vb = function(d,c){
-                for(var b=[],a=0;a<d[e];a++)b[b[e]] = String[kb](d[Z](a)-(c?c:3));
-                return b.join("")
-            },
-            Vb = function(a){
-                return a.replace(/(?:.*\.)?(\w)([\w\-])?[^.]*(\w)\.[^.]*$/,"$1$3$2")
-            },
-            wb = [/(?:.*\.)?(\w)([\w\-])[^.]*(\w)\.[^.]+$/,/.*([\w\-])\.(\w)(\w)\.[^.]+$/,/^(?:.*\.)?(\w)(\w)\.[^.]+$/,/.*([\w\-])([\w\-])\.com\.[^.]+$/,/^(\w)[^.]*(\w)$/],
-            p = window.setTimeout,
-            s = "nextSibling",
-            q = "previousSibling",
-            Ub = l.all&&!window.atob,
-            o = {};
-        o.a = Kb();
-        var mb = function(b){
+    var e = "length",
+        l = document,
+        Mb = function(c){
+            var a = c.childNodes;
+            if(a&&a[e]){
+                var b = a[e];
+                while(b--)a[b].nodeType != 1&&a[b][m].removeChild(a[b])
+            }
+        },
+        eb = function(a){
+            if(a&&a.stopPropagation)a.stopPropagation();
+            else if(a&&typeof a.cancelBubble != "undefined")a.cancelBubble = true
+        },
+        db = function(b){
+            var a = b||window.event;
+            if(a.preventDefault)a.preventDefault();
+            else if(a)a.returnValue = false
+        },
+        Qb = function(b){
+            if(typeof b[f].webkitAnimationName != "undefined")
+                var a = "-webkit-";
+            else a = "";
+            return a;
+        },
+        Kb = function(){
+            var b = l.getElementsByTagName("head");
+            if(b[e]){
+                var a = l.createElement("style");
+                b[0].appendChild(a);
+                return a.sheet?a.sheet:a.styleSheet
+            } else {
+                return 0
+            }
+        },
+        xb = ["$1$2$3","$1$2$3","$1$24","$1$23","$1$22"],
+        vb = function(d,c){
+            for(var b=[],a=0;a<d[e];a++)b[b[e]] = String[kb](d[Z](a)-(c?c:3));
+            return b.join("")
+        },
+        Vb = function(a){
+            return a.replace(/(?:.*\.)?(\w)([\w\-])?[^.]*(\w)\.[^.]*$/,"$1$3$2")
+        },
+        wb = [/(?:.*\.)?(\w)([\w\-])[^.]*(\w)\.[^.]+$/,/.*([\w\-])\.(\w)(\w)\.[^.]+$/,/^(?:.*\.)?(\w)(\w)\.[^.]+$/,/.*([\w\-])([\w\-])\.com\.[^.]+$/,/^(\w)[^.]*(\w)$/],
+        p = window.setTimeout,
+        s = "nextSibling",
+        q = "previousSibling",
+        Ub = l.all&&!window.atob,
+        o = {};
+    o.a = Kb();
+    var mb = function(b){
             b = "#"+a.b+b.replace("__",o.p);
             o.a.insertRule(b,0)
         },
@@ -128,79 +128,79 @@ function ThumbnailSlider(a){
     };
     N = "ontouchstart"in window||window.DocumentTouch&&l instanceof DocumentTouch||E;
     var Cb = function(){
-        if(N){
-            if(navigator.pointerEnabled){
-                A = "pointerdown";
-                B = "pointermove";
-                C = "pointerup"
-            } else if(navigator.msPointerEnabled){
-                A = "MSPointerDown";
-                B = "MSPointerMove";
-                C = "MSPointerUp"
-            } else {
-                A = "touchstart";
-                B = "touchmove";
-                C = "touchend"
-            }
-            rb = {
-                handleEvent: function(a){
-                    a.preventManipulation&&a.preventManipulation();
-                    switch(a.type){
-                        case A: this.a(a);
-                            break;
-                        case B:this.b(a);
-                            break;
-                        case C:this.c(a)
-                    }
-                    eb(a)
-                },
-                a: function(a){
-                    if(Bb(a)||c[e]<2)return;
-                    var d = E?a:a.touches[0];
-                    L = { x:d[bb],y:d[cb],l:b.pS };
-                    z = null;
-                    w={};
-                    b[t](B,this,false);
-                    b[t](C,this,false)
-                },
-                b: function(a){
-                    if(!E&&(a.touches[e]>1||a.scale&&a.scale!==1))return;
-                    var b=E?a:a.touches[0];
-                    w={x:b[bb]-L.x,y:b[cb]-L.y};
-                    if(z===null)z=!!(z||Math.abs(w.x)<Math.abs(w.y));
-                    if(!z){
-                        db(a);
-                        W=0;
-                        ub();
-                        i(L.l+w.x,1)}
-                },
-                c:function(){
-                    if(z===false){
-                        var e=g,
-                            l = Math.abs(w.x)>30;
-                        if(l){
-                            var f=w.x>0?1:-1,
-                                m=f*w.x*1.5/c[g][h];
-                            if(f===1&&a.f==3&&!c[g][q]){
-                                var k=b.firstChild[d];
-                                b.insertBefore(b.lastChild,b.firstChild);
-                                i(b.pS+k-b.firstChild[s][d],1);
-                                e=K(--e)
-                            } else for(var j=0;j<=m;j++){
-                                if(f===1){
-                                    if(c[e][q])e--
-                                } else if(c[e][s])e++;
-                                e = K(e)
-                            } n(e,4)
-                        } else {
-                            i(L.l);
-                            if(a.g)R = window.setInterval(function(){J(g+1,0)},a.i)
-                        } p(function(){W=1},500)
-                    } b.removeEventListener(B,this,false);
-                    b.removeEventListener(C,this,false)}
-            };
-            b[t](A,rb,false)}
-    },
+            if(N){
+                if(navigator.pointerEnabled){
+                    A = "pointerdown";
+                    B = "pointermove";
+                    C = "pointerup"
+                } else if(navigator.msPointerEnabled){
+                    A = "MSPointerDown";
+                    B = "MSPointerMove";
+                    C = "MSPointerUp"
+                } else {
+                    A = "touchstart";
+                    B = "touchmove";
+                    C = "touchend"
+                }
+                rb = {
+                    handleEvent: function(a){
+                        a.preventManipulation&&a.preventManipulation();
+                        switch(a.type){
+                            case A: this.a(a);
+                                break;
+                            case B:this.b(a);
+                                break;
+                            case C:this.c(a)
+                        }
+                        eb(a)
+                    },
+                    a: function(a){
+                        if(Bb(a)||c[e]<2)return;
+                        var d = E?a:a.touches[0];
+                        L = { x:d[bb],y:d[cb],l:b.pS };
+                        z = null;
+                        w={};
+                        b[t](B,this,false);
+                        b[t](C,this,false)
+                    },
+                    b: function(a){
+                        if(!E&&(a.touches[e]>1||a.scale&&a.scale!==1))return;
+                        var b=E?a:a.touches[0];
+                        w={x:b[bb]-L.x,y:b[cb]-L.y};
+                        if(z===null)z=!!(z||Math.abs(w.x)<Math.abs(w.y));
+                        if(!z){
+                            db(a);
+                            W=0;
+                            ub();
+                            i(L.l+w.x,1)}
+                    },
+                    c:function(){
+                        if(z===false){
+                            var e=g,
+                                l = Math.abs(w.x)>30;
+                            if(l){
+                                var f=w.x>0?1:-1,
+                                    m=f*w.x*1.5/c[g][h];
+                                if(f===1&&a.f==3&&!c[g][q]){
+                                    var k=b.firstChild[d];
+                                    b.insertBefore(b.lastChild,b.firstChild);
+                                    i(b.pS+k-b.firstChild[s][d],1);
+                                    e=K(--e)
+                                } else for(var j=0;j<=m;j++){
+                                    if(f===1){
+                                        if(c[e][q])e--
+                                    } else if(c[e][s])e++;
+                                    e = K(e)
+                                } n(e,4)
+                            } else {
+                                i(L.l);
+                                if(a.g)R = window.setInterval(function(){J(g+1,0)},a.i)
+                            } p(function(){W=1},500)
+                        } b.removeEventListener(B,this,false);
+                        b.removeEventListener(C,this,false)}
+                }; // end rb
+                b[t](A,rb,false)}
+        }, // end Cb
         Pb = function(a){
             var b = Vb(document.domain.replace("www.",""));
             try{ typeof atob=="function"&&(function(a,c){
@@ -209,7 +209,7 @@ function ThumbnailSlider(a){
                 typeof this[b]==="function"&&this[b](c,wb,xb)
             })(b,a)
             } catch(c){}
-    },
+        }, // end Pb
         f = "style",
         t="addEventListener",
         r="className",
@@ -227,11 +227,12 @@ function ThumbnailSlider(a){
             var b = false;
             if(a[r])b = Rb(a[r].split(" "),c);
             return b
-            },
+        },
         P = function(a,b,c){
             if(!I(a,b))if(a[r]=="")a[r]=b;
             else if(c)a[r]=b+" "+a[r];
-            else a[r]+=" "+b},
+            else a[r]+=" "+b
+        },
         H = function(c,f){
             if(c[r]){
                 for(var d="", b = c[r].split(" "), a=0, g=b[e]; a<g; a++)
@@ -253,10 +254,11 @@ function ThumbnailSlider(a){
                 c.webkitTransitionDuration=c.transitionDuration=(e?0:a.j)+"ms";
                 c.webkitTransform=c.transform="translate"+(a.c?"X(":"Y(")+d+"px)"}
             else c[lb]=d+"px";
-            b.pS=d},
-        ob=function(a){
+            b.pS=d
+        },
+        ob = function(a){
             return!a.complete?0:a.width===0?0:1
-            },
+        },
         M = null,j,x=0,b,c=[],g=0,R,Wb,S=0,fb=0,tb,y=0,W=1,ab,ib,d,h,k,lb,u=0,bb,cb,sb,
         Lb = function(b){
             if(!b.zimg){
@@ -304,7 +306,7 @@ function ThumbnailSlider(a){
                 O(b,b.zimg);
                 b.zimg=1
             }
-        },
+        }, // end Lb
         qb = 0,
         jb = function(a){
             return g==0&&a==c[e]-1
@@ -334,7 +336,7 @@ function ThumbnailSlider(a){
                     a[f].height=b[f].height
                 } else a[f].width=a[f].height="64px"
             }
-        },
+        }, // end Fb
         O = function(p,k){
             var j=a.d,d=a.e;
             if(!k)Fb(p,j,d);
@@ -370,7 +372,7 @@ function ThumbnailSlider(a){
                     else c[g]=d
                 }
             }
-        },
+        }, // end o
         G = function(d,i,l,o){
             var g=x||5,r=0;
             if(a.f==3&&i)if(l)var f=Math.ceil(g/2),m=d-f,n=d+f+1;
@@ -400,7 +402,7 @@ function ThumbnailSlider(a){
                     G(d,i,l,o)
                 },500)
             }
-        },
+        }, // end G
         T = function(a){
             return b.pS+a[d]<0?a:a[q]?T(a[q]):a
         },
@@ -436,8 +438,8 @@ function ThumbnailSlider(a){
                 } else if(a.o===0&&!e[s]&&b.pS+b[h]==j[k]){
                     i(j[k]-b[h]-80);
                     p(function(){
-                        i(j[k]-b[h])
-                    },
+                            i(j[k]-b[h])
+                        },
                         a.j/2)
                 } else b.pS+e[d]+e[h]+30>j[k]&&V(e);
                 return f
@@ -459,7 +461,7 @@ function ThumbnailSlider(a){
                 if(a.f==4)e=D(c[g]);
                 V(e)
             } return e.ix
-        },
+        }, // end Nb
         V = function(c){
             if(typeof a.o=="number"&&b[h]-c[d]+a.o<j[k])i(j[k]-b[h]-a.o);
             else i(-c[d]+u)
@@ -475,14 +477,16 @@ function ThumbnailSlider(a){
             b[f].msTouchAction=b[f].touchAction=a.c?"pan-y":"pan-x";
             b[f].webkitTransitionProperty=b[f].transitionProperty="transform";
             b[f].webkitTransitionTimingFunction=b[f].transitionTimingFunction="cubic-bezier(.2,.88,.5,1)";
-            n(g,a.f==3?3:1)},n=function(c,b){
-                a.m&&clearTimeout(ab);
-                J(c,b);
-                if(a.g){
-                    clearInterval(R);
-                    R=window.setInterval(function(){J(g+1,0)},a.i)
-                }
-            },
+            n(g,a.f==3?3:1)
+        }, // end Jb
+        n = function(c,b){
+            a.m&&clearTimeout(ab);
+            J(c,b);
+            if(a.g){
+                clearInterval(R);
+                R=window.setInterval(function(){J(g+1,0)},a.i)
+            }
+        },
         Q = function(){
             y=!y;
             tb[r]=y?"pause":"";
@@ -533,7 +537,7 @@ function ThumbnailSlider(a){
             lb=b?"left":"top";
             bb=b?"pageX":"pageY";
             cb=b?"pageY":"pageX"
-        },
+        }, // end Hb
         pb = function(s){
             Hb();
             b=s;
@@ -542,8 +546,8 @@ function ThumbnailSlider(a){
             j=b[m];
             if(a.m){
                 v(b,"mouseover", function(){
-                        clearTimeout(ab);
-                        ub()
+                    clearTimeout(ab);
+                    ub()
                 });
                 v(b,"mouseout",function(){
                     ab=p(function(){
@@ -596,7 +600,7 @@ function ThumbnailSlider(a){
                             d.height = h+"px";
                             d.width = j/i*h+"px"
                         } if(!a.c)b[m][f].width=d.width
-                },
+                    },
                     k = function(){
                         clearTimeout(h);
                         h = p(function(){
@@ -604,7 +608,7 @@ function ThumbnailSlider(a){
                         },99)};
                 v(window,"resize",k)
             }
-        },
+        }, // end pb
         yb = function(g){
             if(a.h){
                 for(var d=0,i=c[e];d<i;d++){
@@ -619,7 +623,7 @@ function ThumbnailSlider(a){
                 if(b.pS+b[h]-u-1<=j[k])P(fb,"disabled");
                 else H(fb,"disabled")
             }
-        },
+        }, // end yb
         hb = function(){
             var a=b.firstChild;
             if(b.pS+a[d]>-50)return;
@@ -638,7 +642,9 @@ function ThumbnailSlider(a){
             while(c!=a&&e<x&&c.zimg===1){
                 b.insertBefore(b.lastChild,b.firstChild);
                 c=b.lastChild;e++
-            }i(b.pS+f-a[d],1)},J=function(b,d){
+            }i(b.pS+f-a[d],1)
+        },
+        J = function(b,d){
             if(c[e]<2)return;
             b=K(b);
             if(!d&&(y||b==g))return;
@@ -656,16 +662,17 @@ function ThumbnailSlider(a){
             g=b;
             G(b,0,1,a.f==4);
             if(a.f==3)ib=p(hb,sb);
-            a.r&&a.r(h,b,d)};
+            a.r&&a.r(h,b,d)
+        }; // end J
     pb.prototype = {
-        c:function(){
+        c: function(){
             for(var g=b.children,d=0,h=g[e];d<h;d++){
                 c[d]=g[d];
                 c[d].ix=d;
                 c[d][f].display=a.c?"inline-block":"block"
             }
         },
-        b:function(){
+        b: function(){
             Mb(b);
             this.c();
             var f=0;
@@ -676,44 +683,44 @@ function ThumbnailSlider(a){
                 for(var h=a.l%c[e],d=0;d<h;d++)b.appendChild(c[d]);f=1
             }f&&this.c()
         },
-        d:function(d,c){
-            var b=l.createElement("div");
-            b.id=a.b+d;
+        d: function(d,c){
+            var b = l.createElement("div");
+            b.id = a.b+d;
             if(c)b.onclick=c;
             N&&b[t]("touchstart",function(a){
                 a.preventDefault();
                 a.target.click();
                 eb(a)},false);
-            b=j[m].appendChild(b);
+            b = j[m].appendChild(b);
             return b
         },
-        e:function(){
-            S=this.d("-prev",function(){
+        e: function(){
+            S = this.d("-prev",function(){
                 !I(this,"disabled")&&n(g-1,1)
             });
-            fb=this.d("-next",function(){
+            fb = this.d("-next",function(){
                 !I(this,"disabled")&&n(g+1,1)
             });
-            tb=this.d("-pause-play",Q)
+            tb = this.d("-pause-play",Q)
         }
-    };
+    }; // end pb.prototype
     var X = function(){
-        var b=l.getElementById(a.sliderId);
-        if(b){
-            var c=b.getElementsByTagName("ul");
-            if(c[e])M=new pb(c[0])
-        }
-    },
+            var b=l.getElementById(a.sliderId);
+            if(b){
+                var c=b.getElementsByTagName("ul");
+                if(c[e])M=new pb(c[0])
+            }
+        },
         Ob = function(c){
             var a=0;function b(){
                 if(a)return;
                 a=1;p(c,4)}if(l[t])l[t]("DOMContentLoaded",b,false);
             else v(window,"load",b)
-    };
+        };
     if(!a.initSliderByCallingInitFunc)if(l.getElementById(a.sliderId))X();
     else Ob(X);
-    return{
-        display:function(a){
+    return {
+        display: function(a){
             if(c[e]){
                 if(typeof a=="number")var b=a;
                 else b=a.ix;
@@ -721,17 +728,18 @@ function ThumbnailSlider(a){
             }
         },
         prev: function(){n(g-1,1)},
-        next:function(){n(g+1,1)},
-        getPos:function(){return g},
-        getSlides:function(){return c},
-        getSlideIndex:function(a){return a.ix},
-        toggle:Q,init:function(e){!M&&X();
-        if(typeof e=="number")var b=e;
-        else b=e.ix;
+        next: function(){n(g+1,1)},
+        getPos: function(){return g},
+        getSlides: function(){return c},
+        getSlideIndex: function(a){return a.ix},
+        toggle: Q,
+        init: function(e){!M&&X();
+            if(typeof e=="number")var b=e;
+            else b=e.ix;
             if(a.f==3){
                 i(-c[b][d]+(j[k]-c[b][h])/2,1);gb();J(b,0)
             } else { i(-c[b][d]+j[h],4);n(b,4)
             }
-        }
-    }
-}
+        } // end init
+    } // end return
+} // end ThumbnailSlider
