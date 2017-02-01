@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="kukolicious">
 
 <head>
 	<meta charset="utf-8">
@@ -12,6 +12,7 @@
 	<link rel="shortcut icon" href="../../img/beIcon.png">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="stylesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
 <body>
@@ -51,72 +52,21 @@
 </header>
 
 <!-- Photo Gallery -->
-<main class="container dynamicTile">
+<main ng-controller="galleryController as gallery" class="container dynamicTile">
 
 	<!-- Row 1 -->
 	<section class="row">
-		<!-- Tile 1 -->
-		<div class="col-sm-3 col-xs-6">
-			<div id="tile1" class="tile">
-				<div class="carousel slide" data-ride="carousel">
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="img/nailDesign15.jpg" alt="leopard nail design" class="img-responsive"/>
-						</div>
-						<div class="item">
-							<img src="img/nailDesign13.jpg" alt="3 nail design" class="img-responsive"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Tile 2 -->
-		<div class="col-sm-3 col-xs-6">
+		<!-- Tiles -->
+		<div ng-repeat="gallery in galleryR1" class="col-sm-3 col-xs-6">
 			<div class="tile">
 				<div class="carousel slide" data-ride="carousel">
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="img/nailDesign11.jpg" alt="water transfer" class="img-responsive"/>
+							<img ng-src="{{gallery.photo1}}" alt="{{gallery.alt1}}" class="img-responsive"/>
 						</div>
 						<div class="item">
-							<img src="img/nailDesign14.jpg" alt="glitter color nail" class="img-responsive"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Tile 3 -->
-		<div class="col-sm-3 col-xs-6">
-			<div class="tile">
-				<div class="carousel slide" data-ride="carousel">
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="img/nailDesign7.jpg" alt="feather nail design" class="img-responsive"/>
-						</div>
-						<div class="item">
-							<img src="img/nailDesign6.jpg" alt="3 color nail" class="img-responsive"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Tile 4 -->
-		<div class="col-sm-3 col-xs-6">
-			<div class="tile">
-				<div class="carousel slide" data-ride="carousel">
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="img/nailDesign5.jpg" alt="symmetric nail design" class="img-responsive"/>
-						</div>
-						<div class="item">
-							<img src="img/nailDesign3.jpg" alt="2 color dotted nail" class="img-responsive"/>
+							<img ng-src="{{gallery.photo2}}" alt="{{gallery.alt2}}" class="img-responsive"/>
 						</div>
 					</div>
 				</div>
@@ -126,70 +76,17 @@
 
 	<!-- Row 2 -->
 	<section class="row">
-		<!-- Tile 5 -->
-		<div class="col-sm-3 col-xs-6">
+		<!-- Tiles -->
+		<div ng-repeat="gallery in galleryR2" class="col-sm-3 col-xs-6">
 			<div class="tile">
 				<div class="carousel slide" data-ride="carousel">
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="img/nailDesign10.jpg" alt="glitter color nail" class="img-responsive"/>
+							<img ng-src="{{gallery.photo1}}" alt="{{gallery.alt1}}" class="img-responsive"/>
 						</div>
 						<div class="item">
-							<img src="img/nailDesign12.jpg" alt="glitter nail design" class="img-responsive"/>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- Tile 6 -->
-		<div class="col-sm-3 col-xs-6">
-			<div class="tile">
-				<div class="carousel slide" data-ride="carousel">
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="img/nailDesign4.jpg" alt="3 color nail" class="img-responsive"/>
-						</div>
-						<div class="item">
-							<img src="img/nailDesign1.jpg" alt="3 color nail" class="img-responsive"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Tile 7 -->
-		<div class="col-sm-3 col-xs-6">
-			<div class="tile">
-				<div class="carousel slide" data-ride="carousel">
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="img/nailDesign8.jpg" alt="symmetric nail design" class="img-responsive"/>
-						</div>
-						<div class="item">
-							<img src="img/nailDesign16.jpg" alt="symmetric design" class="img-responsive"/>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- Tile 8 -->
-		<div class="col-sm-3 col-xs-6">
-			<div class="tile">
-				<div class="carousel slide" data-ride="carousel">
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="img/nailDesign9.jpg" alt="heart nail design" class="img-responsive"/>
-						</div>
-						<div class="item">
-							<img src="img/nailDesign2.jpg" alt="2 color nail" class="img-responsive"/>
+							<img ng-src="{{gallery.photo2}}" alt="{{gallery.alt2}}" class="img-responsive"/>
 						</div>
 					</div>
 				</div>
@@ -213,6 +110,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/kukolicious.js"></script>
+<!-- AngularJS App -->
+<script src="js/app.js"></script>
 
 </body>
 
