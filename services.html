@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="kukolicious">
 
 <head>
 	<meta charset="utf-8">
@@ -12,6 +12,7 @@
 	<link rel="shortcut icon" href="../../img/beIcon.png">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="stylesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
 <body>
@@ -51,7 +52,7 @@
 </header>
 
 <!-- Services -->
-<main class="container pricelist">
+<main ng-controller="servicesController as service" class="container pricelist">
 	<img src="img/spaBanner1.jpg" alt="Nail Salon Banner" class="servicesBanner">
 
 	<h2 class="indent">Services</h2>
@@ -61,55 +62,16 @@
 		<div class="col-sm-6 col-xs-12">
 			<table class="table table-striped">
 				<thead>
-					<tr>
-						<th>Manicures</th>
-						<th>Price</th>
-					</tr>
+				<tr>
+					<th>Manicures</th>
+					<th>Price</th>
+				</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Basic</td>
-						<td>$11</td>
-					</tr>
-					<tr>
-						<td>Buff</td>
-						<td>$13</td>
-					</tr>
-					<tr>
-						<td>French Manicure</td>
-						<td>$15</td>
-					</tr>
-					<tr>
-						<td>Spa</td>
-						<td>$30</td>
-					</tr>
-					<tr>
-						<td>Paraffin</td>
-						<td>$20</td>
-					</tr>
-					<tr>
-						<td>Color Gel</td>
-						<td>$35</td>
-					</tr>
-					<tr>
-						<td>Kids</td>
-						<td>$7</td>
-					</tr>
-					<tr>
-						<td>Polish Change</td>
-						<td>$7</td>
-					</tr>
-					<tr>
-						<td>Soak Off</td>
-						<td>$7</td>
-					</tr>
-					<tr>
-						<td>Nail Art</td>
-						<td>$15 and up</td>
-					</tr>
-					<tr>
-						<td colspan="2">Prices ranges depending on detail of design</td>
-					</tr>
+				<tr ng-repeat="service in manicures">
+					<td>{{service.name}}</td>
+					<td>{{service.price}}</td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
@@ -118,59 +80,23 @@
 		<div class="col-sm-6 col-xs-12">
 			<table class="table table-striped">
 				<thead>
-					<tr>
-						<th>Pedicures</th>
-						<th>Price</th>
-					</tr>
+				<tr>
+					<th>Pedicures</th>
+					<th>Price</th>
+				</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Basic</td>
-						<td>$22</td>
-					</tr>
-					<tr>
-						<td>Buff</td>
-						<td>$25</td>
-					</tr>
-					<tr>
-						<td>French Pedicure</td>
-						<td>$23</td>
-					</tr>
-					<tr>
-						<td>Spa</td>
-						<td>$55</td>
-					</tr>
-					<tr>
-						<td>Paraffin</td>
-						<td>$30</td>
-					</tr>
-					<tr>
-						<td>Color Gel</td>
-						<td>$55</td>
-					</tr>
-					<tr>
-						<td>Kids</td>
-						<td>$12</td>
-					</tr>
-					<tr>
-						<td>Polish Change</td>
-						<td>$12</td>
-					</tr>
-					<tr>
-						<td>Soak Off</td>
-						<td>$15</td>
-					</tr>
-					<tr>
-						<td>Nail Art</td>
-						<td>$26 and up</td>
-					</tr>
-					<tr>
-						<td colspan="2">Prices ranges depending on detail of design</td>
-					</tr>
+				<tr ng-repeat="service in pedicures">
+					<td>{{service.name}}</td>
+					<td>{{service.price}}</td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
+
 	</section>
+
+	<p>Prices ranges depending on detail of design</p>
 
 	<img src="img/divider.jpg" alt="divider" height="40" class="servicesdivider">
 
@@ -179,24 +105,16 @@
 		<div class="col-sm-6 col-xs-12">
 			<table class="table table-striped">
 				<thead>
-					<tr>
-						<th>Hand Massage</th>
-						<th>Price</th>
-					</tr>
+				<tr>
+					<th>Hand Massage</th>
+					<th>Price</th>
+				</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>5 Minutes</td>
-						<td>$10</td>
-					</tr>
-					<tr>
-						<td>10 Minutes</td>
-						<td>$12</td>
-					</tr>
-					<tr>
-						<td>15 Minutes</td>
-						<td>$17</td>
-					</tr>
+				<tr ng-repeat="service in handMassage">
+					<td>{{service.name}}</td>
+					<td>{{service.price}}</td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
@@ -205,24 +123,16 @@
 		<div class="col-sm-6 col-xs-12">
 			<table class="table table-striped">
 				<thead>
-					<tr>
-						<th>Feet Massage</th>
-						<th>Price</th>
-					</tr>
+				<tr>
+					<th>Feet Massage</th>
+					<th>Price</th>
+				</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>5 Minutes</td>
-						<td>$15</td>
-					</tr>
-					<tr>
-						<td>10 Minutes</td>
-						<td>$17</td>
-					</tr>
-					<tr>
-						<td>15 Minutes</td>
-						<td>$22</td>
-					</tr>
+				<tr ng-repeat="service in feetMassage">
+					<td>{{service.name}}</td>
+					<td>{{service.price}}</td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
@@ -235,32 +145,16 @@
 		<div class="col-sm-6 col-xs-12">
 			<table class="table table-striped">
 				<thead>
-					<tr>
-						<th>For Premium Polishes</th>
-						<th>Price</th>
-					</tr>
+				<tr>
+					<th>For Premium Polishes</th>
+					<th>Price</th>
+				</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>OPI</td>
-						<td>$5</td>
-					</tr>
-					<tr>
-						<td>Chanel</td>
-						<td>$4</td>
-					</tr>
-					<tr>
-						<td>Ciate</td>
-						<td>$3</td>
-					</tr>
-					<tr>
-						<td>Deborah Lippmann</td>
-						<td>$3</td>
-					</tr>
-					<tr>
-						<td>Zoya</td>
-						<td>$3</td>
-					</tr>
+				<tr ng-repeat="service in premiumPolishes">
+					<td>{{service.name}}</td>
+					<td>{{service.price}}</td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
@@ -286,6 +180,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/kukolicious.js"></script>
+<!-- AngularJS App -->
+<script src="js/app.js"></script>
 
 </body>
 
