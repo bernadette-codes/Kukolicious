@@ -58,105 +58,29 @@
 	<h2 class="indent">Services</h2>
 
 	<section class="row">
-		<!-- Manicures-->
-		<div class="col-sm-6 col-xs-12">
-			<table class="table table-striped">
-				<thead>
-				<tr>
-					<th>Manicures</th>
-					<th>Price</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr ng-repeat="service in manicures">
-					<td>{{service.name}}</td>
-					<td>{{service.price}}</td>
-				</tr>
-				</tbody>
-			</table>
+		<!-- Nail Color Services -->
+		<div ng-repeat="service in nailColor" class="col-sm-6 col-xs-12">
+			<div services-list></div>
 		</div>
-
-		<!-- Pedicures-->
-		<div class="col-sm-6 col-xs-12">
-			<table class="table table-striped">
-				<thead>
-				<tr>
-					<th>Pedicures</th>
-					<th>Price</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr ng-repeat="service in pedicures">
-					<td>{{service.name}}</td>
-					<td>{{service.price}}</td>
-				</tr>
-				</tbody>
-			</table>
-		</div>
-
 	</section>
 
 	<p>Prices ranges depending on detail of design</p>
 
-	<img src="img/divider.jpg" alt="divider" height="40" class="servicesdivider">
+	<div services-divider></div>
 
 	<section class="row">
-		<!-- Hand Massage-->
-		<div class="col-sm-6 col-xs-12">
-			<table class="table table-striped">
-				<thead>
-				<tr>
-					<th>Hand Massage</th>
-					<th>Price</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr ng-repeat="service in handMassage">
-					<td>{{service.name}}</td>
-					<td>{{service.price}}</td>
-				</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- Feet Massage-->
-		<div class="col-sm-6 col-xs-12">
-			<table class="table table-striped">
-				<thead>
-				<tr>
-					<th>Feet Massage</th>
-					<th>Price</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr ng-repeat="service in feetMassage">
-					<td>{{service.name}}</td>
-					<td>{{service.price}}</td>
-				</tr>
-				</tbody>
-			</table>
+		<!-- Massage Services -->
+		<div ng-repeat="service in massage" class="col-sm-6 col-xs-12">
+			<div services-list></div>
 		</div>
 	</section>
 
-	<img src="img/divider.jpg" alt="divider" height="40" class="servicesdivider">
+	<div services-divider></div>
 
 	<section class="row">
 		<!-- Additional Charge -->
-		<div class="col-sm-6 col-xs-12">
-			<table class="table table-striped">
-				<thead>
-				<tr>
-					<th>For Premium Polishes</th>
-					<th>Price</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr ng-repeat="service in premiumPolishes">
-					<td>{{service.name}}</td>
-					<td>{{service.price}}</td>
-				</tr>
-				</tbody>
-			</table>
+		<div ng-repeat="service in polish" class="col-sm-6 col-xs-12">
+			<div services-list></div>
 		</div>
 	</section>
 
