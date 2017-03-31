@@ -1,12 +1,21 @@
-Nail Salon
 
-Description: This website was built using HTML, CSS and Bootstrap.
+**Kukolicious**
+--------------------
 
-Link: http://www.bernadetteengleman.com/Websites/Kukolicious%20Nail%20Salon/index.html
+[Kukolicious](http://www.bernadetteengleman.com/Websites/Kukolicious%20Nail%20Salon/index.html)  is a responsive 4-webpage nail salon websites built as personal project.
 
-Outline:
-Page 1 - Home
-Page 2 - About
-Page 3 - Services
-Page 4 - Gallery
+![Kukolicious Webpage](http://www.bernadetteengleman.com/img/portfolio/kukoliciousthumbnail.jpg)
 
+![Kukolicious Webpage](http://www.bernadetteengleman.com/img/portfolio/kukoliciousthumbnail2.jpg)
+
+ - Utilizes AngularJS $http Service to provide data from JSON API for list of services and photos
+ - Uses AngularJS Custom Directives for list of services and photos
+
+
+**Front-End:**
+
+ - AngularJS
+ - JavaScript
+ - Bootstrap
+ - CSS3
+ - HTML5
