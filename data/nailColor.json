@@ -1,0 +1,29 @@
+[{
+  "type": "Manicure",
+  "lists": [
+    ["Basic", "$11"],
+    ["Buff", "$13"],
+    ["French Manicure", "$15"],
+    ["Spa", "$30"],
+    ["Paraffin", "$20"],
+    ["Color Gel", "$35"],
+    ["Kids", "$7"],
+    ["Polish Change", "$7"],
+    ["Soak Off", "$7"],
+    ["Nail Art", "$15 and up"]
+  ]
+}, {
+  "type": "Pedicure",
+  "lists": [
+    ["Basic", "$22"],
+    ["Buff", "$25"],
+    ["French Manicure", "$23"],
+    ["Spa", "$55"],
+    ["Paraffin", "$30"],
+    ["Color Gel", "$55"],
+    ["Kids", "$12"],
+    ["Polish Change", "$12"],
+    ["Soak Off", "$15"],
+    ["Nail Art", "$26 and up"]
+  ]
+}]
