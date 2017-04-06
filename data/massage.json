@@ -1,0 +1,15 @@
+[{
+  "type": "Hand Massage",
+  "lists": [
+    ["5 Minutes", "$10"],
+    ["10 Minutes", "$12"],
+    ["15 Minutes", "$17"]
+  ]
+}, {
+  "type": "Feet Massage",
+  "lists": [
+    ["5 Minutes", "$15"],
+    ["10 Minutes", "$17"],
+    ["15 Minutes", "$22"]
+  ]
+}]
