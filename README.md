@@ -2,7 +2,7 @@
 **Kukolicious**
 --------------------
 
-[Kukolicious](http://www.bernadetteengleman.com/Websites/Kukolicious/index.html)  is a responsive nail salon websites built as personal project.
+[Kukolicious Nail Salon](http://www.bernadetteengleman.com/Websites/Kukolicious/index.html)  is a responsive website built as personal project.
 
 ![Kukolicious Webpage](http://www.bernadetteengleman.com/img/portfolio/kukoliciousthumbnail.jpg)
 
